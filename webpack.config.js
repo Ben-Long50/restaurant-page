@@ -27,7 +27,7 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/,
-                use: ['style-loader, css-loader']
+                use: ['style-loader', 'css-loader']
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -37,9 +37,9 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: '',
+            title: 'Longhouse Tavern',
             filename: 'index.html',
-            source: 'src/template.html',
+            template: 'src/template.html',
             minify: {
                 collapseWhitespace: false,
             },
