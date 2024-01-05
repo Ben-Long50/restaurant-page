@@ -1,0 +1,1 @@
+{"version":3,"file":"bundle.js","mappings":"AACAA,QAAQC,IAAI","sources":["webpack://webpack-dev-environment/./src/index.js"],"sourcesContent":["// import './style/main.css'\nconsole.log('cock')"],"names":["console","log"],"sourceRoot":""}
