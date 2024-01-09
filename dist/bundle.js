@@ -16,15 +16,109 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
 // Imports
 
 
+
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/ragna-runes.otf */ "./src/assets/ragna-runes.otf"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.container {
+___CSS_LOADER_EXPORT___.push([module.id, `@font-face {
+    font-family: 'ragna-runes';
+    src: url(${___CSS_LOADER_URL_REPLACEMENT_0___}) format('opentype');
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.container {
+    --box-shadow: 6px 6px 15px 2px rgba(0, 0, 0, 0.5);
+    --text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    --background-color: rgba(255, 255, 255, 0.8);
+    --border-radius: 15px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
     background-size: cover;
-    background-repeat: none;
-}`, "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AAAA;IACI,sBAAsB;IACtB,uBAAuB;AAC3B","sourcesContent":[".container {\n    background-size: cover;\n    background-repeat: none;\n}"],"sourceRoot":""}]);
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+    padding: 50px;
+}
+
+.name-header {
+    margin: 0;
+    padding: 0;
+    font-family: 'ragna-runes';
+    font-size: 80px;
+    letter-spacing: 15px;
+    color: white;
+    text-shadow: var(--text-shadow);
+}
+
+.content-tile {
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    width: 60%;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-button {
+    width: 20%;
+    padding: 20px;
+    font-family: 'ragna-runes';
+    letter-spacing: 10px;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 30px;
+    transition: text-shadow .25s ease;
+}
+
+.nav-button:hover {
+    text-shadow: var(--text-shadow);
+}
+
+.home-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 50px;
+
+}
+
+.beer-tile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+hr {
+    width: 100%;
+}`, "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AAAA;IACI,0BAA0B;IAC1B,+DAAwD;AAC5D;;AAEA;;IAEI,SAAS;IACT,UAAU;IACV,aAAa;IACb,YAAY;IACZ,gBAAgB;AACpB;;AAEA;IACI,iDAAiD;IACjD,6CAA6C;IAC7C,4CAA4C;IAC5C,qBAAqB;IACrB,sBAAsB;IACtB,SAAS;IACT,UAAU;IACV,YAAY;IACZ,WAAW;IACX,sBAAsB;IACtB,2BAA2B;IAC3B,4BAA4B;IAC5B,gBAAgB;IAChB,aAAa;IACb,sBAAsB;IACtB,2BAA2B;IAC3B,mBAAmB;IACnB,SAAS;IACT,aAAa;AACjB;;AAEA;IACI,SAAS;IACT,UAAU;IACV,0BAA0B;IAC1B,eAAe;IACf,oBAAoB;IACpB,YAAY;IACZ,+BAA+B;AACnC;;AAEA;IACI,yCAAyC;IACzC,mCAAmC;IACnC,6BAA6B;IAC7B,UAAU;AACd;;AAEA;IACI,aAAa;IACb,6BAA6B;IAC7B,mBAAmB;AACvB;;AAEA;IACI,UAAU;IACV,aAAa;IACb,0BAA0B;IAC1B,oBAAoB;IACpB,YAAY;IACZ,aAAa;IACb,gBAAgB;IAChB,eAAe;IACf,iCAAiC;AACrC;;AAEA;IACI,+BAA+B;AACnC;;AAEA;IACI,YAAY;IACZ,aAAa;IACb,sBAAsB;IACtB,2BAA2B;IAC3B,aAAa;;AAEjB;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;AACvB;;AAEA;IACI,WAAW;AACf","sourcesContent":["@font-face {\n    font-family: 'ragna-runes';\n    src: url('../assets/ragna-runes.otf') format('opentype');\n}\n\nhtml,\nbody {\n    margin: 0;\n    padding: 0;\n    height: 100vh;\n    width: 100vw;\n    overflow: hidden;\n}\n\n.container {\n    --box-shadow: 6px 6px 15px 2px rgba(0, 0, 0, 0.5);\n    --text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);\n    --background-color: rgba(255, 255, 255, 0.8);\n    --border-radius: 15px;\n    box-sizing: border-box;\n    margin: 0;\n    padding: 0;\n    height: 100%;\n    width: 100%;\n    background-size: cover;\n    background-position: center;\n    background-repeat: no-repeat;\n    overflow: hidden;\n    display: flex;\n    flex-direction: column;\n    justify-content: flex-start;\n    align-items: center;\n    gap: 50px;\n    padding: 50px;\n}\n\n.name-header {\n    margin: 0;\n    padding: 0;\n    font-family: 'ragna-runes';\n    font-size: 80px;\n    letter-spacing: 15px;\n    color: white;\n    text-shadow: var(--text-shadow);\n}\n\n.content-tile {\n    background-color: var(--background-color);\n    border-radius: var(--border-radius);\n    box-shadow: var(--box-shadow);\n    width: 60%;\n}\n\n.nav-bar {\n    display: flex;\n    justify-content: space-evenly;\n    align-items: center;\n}\n\n.nav-button {\n    width: 20%;\n    padding: 20px;\n    font-family: 'ragna-runes';\n    letter-spacing: 10px;\n    border: none;\n    outline: none;\n    background: none;\n    font-size: 30px;\n    transition: text-shadow .25s ease;\n}\n\n.nav-button:hover {\n    text-shadow: var(--text-shadow);\n}\n\n.home-content {\n    flex-grow: 1;\n    display: flex;\n    flex-direction: column;\n    justify-content: flex-start;\n    padding: 50px;\n\n}\n\n.beer-tile {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n}\n\nhr {\n    width: 100%;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -121,6 +215,41 @@ module.exports = function (cssWithMappingToString) {
     }
   };
   return list;
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
+/*!********************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
+  \********************************************************/
+/***/ ((module) => {
+
+
+
+module.exports = function (url, options) {
+  if (!options) {
+    options = {};
+  }
+  if (!url) {
+    return url;
+  }
+  url = String(url.__esModule ? url.default : url);
+
+  // If url is already wrapped in quotes, remove them
+  if (/^['"].*['"]$/.test(url)) {
+    url = url.slice(1, -1);
+  }
+  if (options.hash) {
+    url += options.hash;
+  }
+
+  // Should url be wrapped?
+  // See https://drafts.csswg.org/css-values-3/#urls
+  if (/["'() \t\n]|(%20)/.test(url) || options.needQuotes) {
+    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, "\\n"), "\"");
+  }
+  return url;
 };
 
 /***/ }),
@@ -471,6 +600,57 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
+/***/ "./src/menuPage.js":
+/*!*************************!*\
+  !*** ./src/menuPage.js ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   renderMenu: () => (/* binding */ renderMenu)
+/* harmony export */ });
+const menuList = [];
+
+function Beer(name, price) {
+    this.name = name;
+    this.price = price;
+}
+
+Beer.prototype.addToMenu = function() {
+    menuList.push(this)
+}
+
+const beer1 = new Beer('Cali Creamin', '10');
+beer1.addToMenu();
+
+const beer2 = new Beer('Jeremiah Red', '9');
+beer2.addToMenu();
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (menuList);
+
+const renderMenu = function(parentElement) {
+    menuList.forEach(beer => {
+        const beerTile = document.createElement('div')
+        beerTile.classList.add('beer-tile')
+        const nameElement = document.createElement('h2')
+        nameElement.textContent = beer.name;
+        const priceElement = document.createElement('h3')
+        priceElement.textContent = beer.price
+        beerTile.appendChild(nameElement)
+        beerTile.appendChild(priceElement)
+        parentElement.appendChild(beerTile)
+        if(menuList.indexOf(beer) != menuList.length - 1) {
+            const lineBreak = document.createElement('hr')
+            parentElement.appendChild(lineBreak)
+        }
+
+    })
+}
+
+/***/ }),
+
 /***/ "./src/assets/forest.jpg":
 /*!*******************************!*\
   !*** ./src/assets/forest.jpg ***!
@@ -478,6 +658,16 @@ module.exports = styleTagTransform;
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "forest.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/ragna-runes.otf":
+/*!************************************!*\
+  !*** ./src/assets/ragna-runes.otf ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "ragna-runes.otf";
 
 /***/ })
 
@@ -506,6 +696,9 @@ module.exports = __webpack_require__.p + "forest.jpg";
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
@@ -583,6 +776,32 @@ module.exports = __webpack_require__.p + "forest.jpg";
 /******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"bundle": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		// no on chunks loaded
+/******/ 		
+/******/ 		// no jsonp function
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/nonce */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nc = undefined;
@@ -598,12 +817,49 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.css */ "./src/styles/main.css");
 /* harmony import */ var _assets_forest_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/forest.jpg */ "./src/assets/forest.jpg");
+/* harmony import */ var _menuPage_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./menuPage.js */ "./src/menuPage.js");
 
 
 
-const container = document.querySelector('.container')
 
-container.style.backgroundImage = _assets_forest_jpg__WEBPACK_IMPORTED_MODULE_1__
+
+const generateLayout = function() {
+    const container = document.querySelector('.container')
+    container.style.backgroundImage = `url('${_assets_forest_jpg__WEBPACK_IMPORTED_MODULE_1__}')`
+
+    const nameHeader = document.createElement('h1')
+    nameHeader.classList.add('name-header')
+    nameHeader.textContent = 'Longhouse Tavern'
+    container.appendChild(nameHeader)
+
+    const navBar = document.createElement('div')
+    navBar.classList.add('nav-bar')
+    navBar.classList.add('content-tile')
+    container.appendChild(navBar)
+
+    const navText = ['Home', 'Menu', 'Contact']
+    navText.forEach(text => {
+        const navButton = document.createElement('button')
+        navButton.classList.add('nav-button')
+        navButton.textContent = text
+        navBar.appendChild(navButton)
+    })
+
+    const homeContentContainer = document.createElement('div')
+    homeContentContainer.classList.add('home-content')
+    homeContentContainer.classList.add('content-tile')
+    container.appendChild(homeContentContainer)
+
+    return {
+        homeContentContainer
+    }
+}
+
+const layout = generateLayout();
+
+(0,_menuPage_js__WEBPACK_IMPORTED_MODULE_2__.renderMenu)(layout.homeContentContainer);
+
+console.log(_menuPage_js__WEBPACK_IMPORTED_MODULE_2__["default"])
 })();
 
 /******/ })()

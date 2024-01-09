@@ -1,5 +1,7 @@
 import './styles/main.css'
 import forest from './assets/forest.jpg'
+import menuList from './menuPage.js'
+import { renderMenu } from './menuPage.js'
 
 const generateLayout = function() {
     const container = document.querySelector('.container')
@@ -12,6 +14,7 @@ const generateLayout = function() {
 
     const navBar = document.createElement('div')
     navBar.classList.add('nav-bar')
+    navBar.classList.add('content-tile')
     container.appendChild(navBar)
 
     const navText = ['Home', 'Menu', 'Contact']
@@ -21,6 +24,19 @@ const generateLayout = function() {
         navButton.textContent = text
         navBar.appendChild(navButton)
     })
+
+    const homeContentContainer = document.createElement('div')
+    homeContentContainer.classList.add('home-content')
+    homeContentContainer.classList.add('content-tile')
+    container.appendChild(homeContentContainer)
+
+    return {
+        homeContentContainer
+    }
 }
 
-generateLayout();
+const layout = generateLayout();
+
+renderMenu(layout.homeContentContainer);
+
+console.log(menuList)
