@@ -78,7 +78,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 50px;
+    -webkit-box-sizing: border-box;
+    padding: 15px 50px;
 
 }
 

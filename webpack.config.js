@@ -25,6 +25,7 @@ module.exports = {
     },
     module: {
         rules: [
+            // npm i -D style-loader css-loader
             {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader']
@@ -35,6 +36,7 @@ module.exports = {
             },
         ],
     },
+    // npm i -D html-webpack-plugin
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Longhouse Tavern',

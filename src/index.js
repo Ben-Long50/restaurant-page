@@ -3,40 +3,33 @@ import forest from './assets/forest.jpg'
 import menuList from './menuPage.js'
 import { renderMenu } from './menuPage.js'
 
-const generateLayout = function() {
-    const container = document.querySelector('.container')
-    container.style.backgroundImage = `url('${forest}')`
 
-    const nameHeader = document.createElement('h1')
-    nameHeader.classList.add('name-header')
-    nameHeader.textContent = 'Longhouse Tavern'
-    container.appendChild(nameHeader)
+const container = document.querySelector('.container')
+container.style.backgroundImage = `url('${forest}')`
 
-    const navBar = document.createElement('div')
-    navBar.classList.add('nav-bar')
-    navBar.classList.add('content-tile')
-    container.appendChild(navBar)
+const nameHeader = document.createElement('h1')
+nameHeader.classList.add('name-header')
+nameHeader.textContent = 'Longhouse Tavern'
+container.appendChild(nameHeader)
 
-    const navText = ['Home', 'Menu', 'Contact']
-    navText.forEach(text => {
-        const navButton = document.createElement('button')
-        navButton.classList.add('nav-button')
-        navButton.textContent = text
-        navBar.appendChild(navButton)
-    })
+const navBar = document.createElement('div')
+navBar.classList.add('nav-bar')
+navBar.classList.add('content-tile')
+container.appendChild(navBar)
 
-    const homeContentContainer = document.createElement('div')
-    homeContentContainer.classList.add('home-content')
-    homeContentContainer.classList.add('content-tile')
-    container.appendChild(homeContentContainer)
+const navText = ['Home', 'Menu', 'Contact']
+navText.forEach(text => {
+    const navButton = document.createElement('button')
+    navButton.classList.add('nav-button')
+    navButton.textContent = text
+    navBar.appendChild(navButton)
+})
 
-    return {
-        homeContentContainer
-    }
-}
+const homeContentContainer = document.createElement('div')
+homeContentContainer.classList.add('home-content')
+homeContentContainer.classList.add('content-tile')
+container.appendChild(homeContentContainer)
 
-const layout = generateLayout();
-
-renderMenu(layout.homeContentContainer);
+renderMenu(homeContentContainer);
 
 console.log(menuList)
