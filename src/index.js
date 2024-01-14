@@ -1,7 +1,8 @@
 import './styles/main.css'
 import forest from './assets/forest.jpg'
-import menuList from './menuPage.js'
+// import { renderHome } from './homePage.js'
 import { renderMenu } from './menuPage.js'
+// import { renderContact } from './contactPage.js'
 
 
 const container = document.querySelector('.container')
@@ -25,11 +26,22 @@ navText.forEach(text => {
     navBar.appendChild(navButton)
 })
 
-const homeContentContainer = document.createElement('div')
-homeContentContainer.classList.add('home-content')
-homeContentContainer.classList.add('content-tile')
-container.appendChild(homeContentContainer)
+const contentContainer = document.createElement('div')
+contentContainer.classList.add('home-content')
+contentContainer.classList.add('content-tile')
+container.appendChild(contentContainer)
 
-renderMenu(homeContentContainer);
-
-console.log(menuList)
+const navButtons = document.querySelectorAll('.nav-button');
+navButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        if(button.textContent === 'Home') {
+            renderHome(contentContainer)
+        }
+        else if(button.textContent === 'Menu') {
+            renderMenu(contentContainer)
+        }
+        else if(button.textContent === 'Contact') {
+            renderContact(contentContainer)
+        }
+    })
+})
