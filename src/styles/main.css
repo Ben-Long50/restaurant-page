@@ -3,6 +3,10 @@
     src: url('../assets/ragna-runes.otf') format('opentype');
 }
 
+@font-face {
+    font-family: 'poppins';
+    src: url('../assets/Poppins-Regular.ttf') format('truetype');
+}
 html,
 body {
     margin: 0;
@@ -11,11 +15,19 @@ body {
     width: 100%;
 }
 
+p {
+    font-family: var(--secondary-font);
+    font-size: 22px;
+    line-height: 2.5em;
+}
+
 .container {
     --box-shadow: 6px 6px 15px 2px rgba(0, 0, 0, 0.5);
     --text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
     --background-color: rgba(255, 255, 255, 0.8);
     --border-radius: 15px;
+    --primary-font: 'ragna-runes';
+    --secondary-font: 'poppins';
     box-sizing: border-box;
     background-attachment: fixed;
     margin: 0;
@@ -60,11 +72,12 @@ body {
     width: 20%;
     padding: 20px;
     font-family: 'ragna-runes';
+    font-weight: bold;
     letter-spacing: 10px;
     border: none;
     outline: none;
     background: none;
-    font-size: 30px;
+    font-size: 34px;
     transition: text-shadow .25s ease;
 }
 
@@ -73,12 +86,46 @@ body {
 }
 
 .home-content {
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
+    align-items: center;
     -webkit-box-sizing: border-box;
     padding: 15px 50px;
 
+}
+
+.home-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2;
+    gap: 50px;
+}
+
+.home-title {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: center;
+    font-family: var(--primary-font);
+    text-shadow: var(--text-shadow);
+    font-size: 50px;
+    letter-spacing: 15px;
+    line-height: 2.5em;
+}
+
+.intro-paragraph{ 
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    align-self: center;
+    justify-self: center;
+}
+
+.home-image {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    height: auto;
+    width: 80%;
+    align-self: center;
+    justify-self: center;
 }
 
 .beer-tile {
@@ -89,21 +136,73 @@ body {
     align-items: center;
 }
 
+.beer-abv,
+.beer-description,
+.intro-paragraph {
+    font-family: var(--secondary-font);
+}
+
 .beer-name {
-    font-size: 32px;
+    font-family: var(--primary-font);
+    letter-spacing: 7px;
+    font-size: 30px;
+    font-weight: 600;
 }
 
 .beer-abv {
     text-align: end;
-    font-size: 28px;
+    font-size: 26px;
+    font-weight: 600;
+
 }
 
 .beer-description {
     grid-column: 1 / 3;
     grid-row: 2 / 3;
-    font-size: 24px;
 }
 
 hr {
     width: 100%;
+}
+
+.contact-container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2;
+}
+
+.contact-title {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: center;
+    font-family: var(--primary-font);
+    text-shadow: var(--text-shadow);
+    font-size: 60px;
+    letter-spacing: 15px;
+}
+
+.contact-image {
+    justify-self: start;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.contact-description {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    padding-top: 50px;
+    padding-right: 50px;
+}
+
+.info-container {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    padding-left: 50px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }

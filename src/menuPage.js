@@ -19,9 +19,6 @@ new Beer('Fjord Frost IPA', 'Immerse yourself in the cool, refreshing taste of t
 new Beer('Norse Nectar Hazy', 'Inspired by the sweetness of Norse mythology, this pale ale boasts a burst of fruity hop flavors, creating a harmonious and enjoyable experience.', '6.9%');
 new Beer('Odin\'s Wisdom Wheat', 'A brew inspired by the wisdom of Odin himself, this wheat beer offers a smooth, contemplative experience with subtle notes of enlightenment.', '5.2%');
 
-
-export default menuList;
-
 export const renderMenu = function(parentElement) {
     menuList.forEach(beer => {
         const beerTile = document.createElement('div')

@@ -1,8 +1,8 @@
 import './styles/main.css'
 import forest from './assets/forest.jpg'
-// import { renderHome } from './homePage.js'
+import { renderHome } from './homePage.js'
 import { renderMenu } from './menuPage.js'
-// import { renderContact } from './contactPage.js'
+import { renderContact } from './contactPage.js'
 
 
 const container = document.querySelector('.container')
@@ -31,17 +31,28 @@ contentContainer.classList.add('home-content')
 contentContainer.classList.add('content-tile')
 container.appendChild(contentContainer)
 
+const removeContent = function() {
+    while(contentContainer.firstChild) {
+        contentContainer.removeChild(contentContainer.firstChild)
+    }
+}
+
 const navButtons = document.querySelectorAll('.nav-button');
 navButtons.forEach(button => {
     button.addEventListener('click', () => {
         if(button.textContent === 'Home') {
+            removeContent()
             renderHome(contentContainer)
         }
         else if(button.textContent === 'Menu') {
+            removeContent()
             renderMenu(contentContainer)
         }
         else if(button.textContent === 'Contact') {
+            removeContent()
             renderContact(contentContainer)
         }
     })
 })
+
+renderHome(contentContainer)
